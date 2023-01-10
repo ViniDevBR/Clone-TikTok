@@ -4,13 +4,15 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
 `
 
 export const MainContainer = styled.main`
-  border: 1px solid yellow;
+  margin-top: 70px;
   display: flex;
+  flex-direction: column;
   width: 100%;
+  align-items: flex-end;
 
   @media (min-width: 1024px) {
     width: 90%;
