@@ -1,17 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 interface IProps {
-  variant?: 'secondary'
+  variant?: 'secondary' | 'terciary'
 }
 
 export const ButtonContainer = styled.button<IProps>`
-  background-color: ${({variant}) => variant === 'secondary' ? '#FF3B5C' : '#252525'};
-  outline: 0;
-  font-weight: 600;
+  background-color: #252525;
   padding: 0 10px;
   height: 35px;
   width: 120px;
-  color: #FFF;
   border: 0;
   border-radius: 4px;
   display: flex;
@@ -19,8 +16,42 @@ export const ButtonContainer = styled.button<IProps>`
   justify-content: center;
   cursor: pointer;
 
-
   &:hover {
-    background-color: ${({variant}) => variant === 'secondary' ? '#B91010' : '#25252590'};
+    background-color: #25252590;
   }
+
+  p {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #FFFFFFE6;
+  }
+
+  ${({variant}) => variant === 'secondary' && css`
+    background-color: #FF3B5C;
+
+    &:hover {
+      background-color: #B91010;
+    }
+    p {
+      color: #FFFFFF;
+    }
+  `}
+
+  ${({variant}) => variant === 'terciary' && css`
+    background-color: #FFFFFF14;
+    color: #FF3B5C;
+    width: 100%;
+    border: 1px solid #FF3B5C;
+    height: 48px;
+
+    p {
+      font-size: 1.8rem;
+      color: #FF3B5C;
+    }
+
+    &:hover {
+      background-color: #FF3B5C14;
+    }
+  `}
+
 `

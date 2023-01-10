@@ -2,7 +2,7 @@ import { ButtonContainer } from './styles'
 
 interface IButton {
   title: string
-  variant?: 'secondary'
+  variant?: 'secondary' | 'terciary'
 }
 
 export function Button(props: IButton) {

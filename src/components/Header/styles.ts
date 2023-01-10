@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   width: 100%;
+  height: 70px;
   display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #FFFFFF1F;
@@ -34,7 +36,7 @@ export const InputContainer = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 400px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `
@@ -103,7 +105,7 @@ export const MenuContainer = styled.div`
   .ballA {
     width: 5px;
     height: 5px;
-    background-color: #fff;
+    background-color: #FFFFFFE6;
     border-radius: 50%;
     margin: 2px 0;
   }
@@ -120,12 +122,17 @@ export const ContentContainer = styled.div`
       align-items: center;
       gap: 5px;
       font-weight: 600;
-      padding: 10px;
+      padding: 10px 16px;
       cursor: pointer;
 
       &:hover {
         background-color: gray;
       }
+    }
+    .listItem {
+      color: #FFFFFFE6;
+      font-size: 1.6rem;
+      margin-left: 8px;
     }
   }
 `
