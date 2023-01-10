@@ -4,7 +4,6 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: 70px;
   display: flex;
-  position: fixed;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #FFFFFF1F;
@@ -13,7 +12,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 7px 0;
+    padding: 5px 0;
     width: 100%;
   }
 
@@ -22,9 +21,11 @@ export const HeaderContainer = styled.header`
     margin-left: 10px;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 1024px) {
     .content {
       width: 90%;
+      max-width: 1300px;
+      padding: 5px 16px;
     }
     img {
       margin-left: 0;
@@ -33,69 +34,70 @@ export const HeaderContainer = styled.header`
 `
 
 export const InputContainer = styled.div`
-  display: flex;
-  align-items: center;
+  display: none;
 
-  @media (max-width: 800px) {
-    display: none;
+  @media (min-width: 800px) {
+    display: flex;
+    align-items: center;
   }
 `
 
 export const InputStyle = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: #FFFFFF1F;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-  padding: 12px 0 12px 16px;
-  height: 45px;
+  display: none;
 
-  input {
-    border: none;
-    caret-color: #FF3B5C;
-    color: #FFF;
-    outline: none;
-    background-color: transparent;
-    width: 270px;
-  }
+  @media (min-width: 800px) {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF1F;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 12px 0 12px 16px;
+    height: 45px;
 
-  .separator {
-    background-color: #767676;
-    height: 100%;
-    width: 1px;
-  }
+    input {
+      border: none;
+      caret-color: #FF3B5C;
+      color: #FFF;
+      outline: none;
+      background-color: transparent;
+      width: 270px;
+    }
 
-  @media (max-width: 800px) {
-    display: none;
+    .separator {
+      background-color: #767676;
+      height: 100%;
+      width: 1px;
+    }
   }
 `
 
 export const IconContainer = styled.button`
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  background-color: #FFFFFF1F;
-  padding: 12px;
-  height: 45px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  display: none;
 
-  &:hover {
-    background-color: #FFFFFF4f;
-  }
+  @media (min-width: 800px) {
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    background-color: #FFFFFF1F;
+    padding: 12px;
+    height: 45px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
 
-  @media (max-width: 800px) {
-    display: none;
+    &:hover {
+      background-color: #FFFFFF4f;
+    }
   }
 `
 
 export const Buttons = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display: none;
 
-  @media (max-width: 450px) {
-    display: none;
+  @media (min-width: 460px) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
 `
 

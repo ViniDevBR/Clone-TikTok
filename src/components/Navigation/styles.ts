@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
-  position: fixed;
   top: 70px;
   border-right: 1px solid #FFFFFF1F;
   width: 70px;
@@ -10,7 +9,8 @@ export const NavContainer = styled.nav`
   overflow-y: scroll;
 
   @media (min-width: 1024px) {
-    width: 340px;
+    width: 30%;
+    max-width: 340px;
   }
 `
 

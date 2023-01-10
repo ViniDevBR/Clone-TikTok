@@ -13,11 +13,13 @@ import theme from './theme'
 
 export function App() {
   return (
-    <Router>
-      <GlobalStyles />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme['dark']}>
+      <Router>
+        <GlobalStyles />
+        <Routes>
+          <Route path='/' element={<Home />}/>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   )
 }
