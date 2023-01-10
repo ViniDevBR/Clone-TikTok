@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
+  position: fixed;
   top: 70px;
   border-right: 1px solid #FFFFFF1F;
   width: 70px;
   height: calc(100vh - 70px);
   padding: 12px 8px;
   overflow-y: scroll;
+  background-color: #121212;
 
   @media (min-width: 1024px) {
     width: 30%;

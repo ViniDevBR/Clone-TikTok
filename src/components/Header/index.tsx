@@ -1,5 +1,6 @@
 //COMPONENTS
 import { Button } from '../Button'
+import { Text } from '../Text'
 //STYLED-COMPONENTS
 import { HeaderContainer, InputStyle, IconContainer, Buttons, MenuContainer, InputContainer, ContentContainer } from './styles'
 //IMG && ICONS
@@ -28,8 +29,16 @@ export function Header() {
         </InputContainer>
 
         <Buttons>
-          <Button title='+ Carregar' />
-          <Button title='Entrar' variant='secondary'/>
+          <Button>
+            <Text weight='600'>
+              + Carregar
+            </Text>
+          </Button>
+          <Button variant='secondary'>
+            <Text color='#FFFFFF' weight='600'>
+              Entrar
+            </Text>
+          </Button>
 
           <HoverCard.Root openDelay={5}>
             <HoverCard.Trigger asChild>

@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
+  position: fixed;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #FFFFFF1F;
+  background-color: #121212;
 
   .content {
     display: flex;

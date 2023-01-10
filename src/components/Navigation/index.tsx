@@ -26,6 +26,7 @@ import { IExplorer } from '../../@types/Explorer'
 //COMPONENTS
 import { Button } from '../Button'
 import { UserList } from '../UserList'
+import { Text } from '../Text'
 
 
 export function Navigation() {
@@ -54,7 +55,11 @@ export function Navigation() {
           <p className='alert'>
             Faça login para seguir criadores, curtir vídeos e ver comentários.
           </p>
-          <Button variant='terciary' title='Login'/>
+          <Button width='100%' height='50px' variant='terciary'>
+            <Text color='#FF3B5C' size={1.8} weight='600'>
+              Login
+            </Text>
+          </Button>
         </Login>
       </IconContainer>
 
