@@ -44,6 +44,14 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF14;
+    border-radius: 20px;
+  }
+
   body {
     background-color: #121212;
     color: #FFFFFF;
