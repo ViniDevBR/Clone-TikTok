@@ -74,6 +74,15 @@ export const topUsers: IUsers[] = [
     followers: '22M'
   },
   {
+    id: '9',
+    name: 'Ronaldinho',
+    verified: true,
+    avatarURL: 'https://www.ofutebolero.com.br/__export/1664306964942/sites/elfutboleromx/img/2022/09/27/ronaldinho-gaucho-em-jogo-da-selecao-brasileira-em-2013-1613746137375_v2_4x3.jpg_1764361242.jpg',
+    description: 'Soccer Ball',
+    likes: '500M',
+    followers: '22M'
+  },
+  {
     id: '10',
     name: 'Carlinhos',
     verified: true,
