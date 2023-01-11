@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export const ButtonContainer = styled.button<IProps>`
-  background-color: #252525;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND2};
   height: ${({ height }) => height || '35px'};
   width: ${({ width }) => width || '120px'};
   border: 0;
@@ -18,24 +18,24 @@ export const ButtonContainer = styled.button<IProps>`
   cursor: pointer;
 
   &:hover {
-    background-color: #25252590;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER};
   }
 
   ${({variant}) => variant === 'secondary' && css`
-    background-color: #FF3B5C;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND7};
 
     &:hover {
-      background-color: #B91010;
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER2};
     }
   `}
 
   ${({variant}) => variant === 'terciary' && css`
-    background-color: #FFFFFF14;
-    color: #FF3B5C;
-    border: 1px solid #FF3B5C;
+    background-color:${({ theme }) => theme.COLORS.BACKGROUND6};
+    color: ${({ theme }) => theme.COLORS.TEXT_2};
+    border: 1px solid ${({ theme }) => theme.COLORS.BORDER_3};
 
     &:hover {
-      background-color: #FF3B5C14;
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER4};
     }
   `}
 `

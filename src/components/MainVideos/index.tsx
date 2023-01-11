@@ -16,6 +16,7 @@ import { Text } from '../Text'
 //RADIX UI
 import * as HoverCard from '@radix-ui/react-hover-card'
 import { UserHoverCard } from '../UserHoverCard'
+import { useTheme } from 'styled-components'
 
 
 interface IProps {
@@ -23,6 +24,7 @@ interface IProps {
 }
 
 export function MainVideo({ video }: IProps) {
+  const { COLORS } = useTheme()
 
   return(
     <MainVideoContainer>
@@ -43,7 +45,7 @@ export function MainVideo({ video }: IProps) {
         </UserInfo>
 
         <Button width='100px' height='30px' variant='terciary'>
-          <Text color='#FF3B5C' weight='600'>
+          <Text color={COLORS.TEXT_2} weight='600'>
             Seguir
           </Text>
         </Button>
@@ -53,7 +55,7 @@ export function MainVideo({ video }: IProps) {
         {video.descriptionVideo && <span className='descVideo'>{video.descriptionVideo}</span>}
         {video.music && (
           <div className='musicNote'>
-            <MusicNotesSimple size={15} color="#FFF" weight="regular" />
+            <MusicNotesSimple size={15} color={COLORS.TEXT_1} weight="regular" />
             <span className='descMusic'>{video.music}</span>
           </div>
         )}
@@ -67,21 +69,21 @@ export function MainVideo({ video }: IProps) {
         <div className='videoInfosPlus'>
           <VideoPlayLikes>
             <div className='iconBg'>
-              <Heart size={25} color='#ffffff' weight='fill' />
+              <Heart size={25} color={COLORS.TEXT_1} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.likes}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ChatCircleDots size={25} color='#ffffff' weight='fill' />
+              <ChatCircleDots size={25} color={COLORS.TEXT_1} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.comments}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ShareNetwork size={25} color='#ffffff' weight='fill' />
+              <ShareNetwork size={25} color={COLORS.TEXT_1} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.shared}</span>
           </VideoPlayLikes>

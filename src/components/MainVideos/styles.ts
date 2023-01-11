@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MainVideoContainer = styled.main`
   padding: 20px 10px;
   width: calc(100% - 70px);
-  border-bottom: 1px solid #FFFFFF1F;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BORDER_1};
 
   @media (min-width: 1024px) {
     margin: 20px 26px;
@@ -51,7 +51,7 @@ export const UserInfo = styled.div`
   }
   .userName{
     cursor: pointer;
-    color: #FFFFFFE6;
+    color: ${({ theme}) => theme.COLORS.TEXT_3};
     font-size: 1.8rem;
     margin-right: 5px;
     font-weight: 600;
@@ -60,7 +60,7 @@ export const UserInfo = styled.div`
     white-space: nowrap;
   }
   .userDesc {
-    color: #FFFFFFE6;
+    color: ${({ theme}) => theme.COLORS.TEXT_3};
     font-size: 1.4rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -89,14 +89,14 @@ export const VideoInfos = styled.div`
     margin-top: 5px;
   }
   .descVideo {
-    color: #FFFFFFE6;
+    color: ${({ theme}) => theme.COLORS.TEXT_3};
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
   .descMusic {
     cursor: pointer;
-    color: #FFFFFFE6;
+    color: ${({ theme}) => theme.COLORS.TEXT_3};
     margin-left: 5px;
     font-weight: 600;
     text-overflow: ellipsis;
@@ -159,11 +159,11 @@ export const VideoPlayLikes = styled.div`
     justify-content: center;
     width: 35px;
     height: 35px;
-    background-color: #FFFFFF1F;
+    background-color: ${({ theme}) => theme.COLORS.BORDER_1};
     margin: 8px 0 6px;
   }
   .videoInfosNumber {
-    color: #FFFFFFBF;
+    color: ${({ theme}) => theme.COLORS.TEXT_4};
     font-weight: 600;
   }
 `

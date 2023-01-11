@@ -10,7 +10,7 @@ export const ListContainer = styled.li`
   width: 100%;
 
   &:hover {
-    background-color: #2E2E2E;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER6};
   }
 
   .contentUser {
@@ -29,13 +29,13 @@ export const ListContainer = styled.li`
       flex-direction: column;
     }
     .nameUser {
-      color: #FFFFFFE6;
+      color: ${({ theme }) => theme.COLORS.TEXT_3};
       font-weight: 600;
       font-size: 1.6rem;
       margin-right: 5px;
     }
     .descUser {
-      color: #FFFFFFBF;
+      color: ${({ theme }) => theme.COLORS.TEXT_4};
     }
   }
 `

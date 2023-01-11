@@ -11,6 +11,7 @@ import {
   MenuContainer,
   InputContainer,
 } from './styles'
+import { useTheme } from 'styled-components'
 //IMG && ICONS
 import logoImg from '../../assets/Images/TikTok-Logo.png'
 import { MagnifyingGlass } from 'phosphor-react'
@@ -19,6 +20,8 @@ import * as HoverCard from '@radix-ui/react-hover-card'
 
 
 export function Header() {
+  const { COLORS } = useTheme()
+
   return (
     <HeaderContainer>
       <div className='content'>
@@ -32,7 +35,7 @@ export function Header() {
             <div className='separator'/>
           </InputStyle>
           <IconContainer>
-            <MagnifyingGlass size={20} color='#767676' weight='bold'/>
+            <MagnifyingGlass size={20} color={COLORS.ICON} weight='bold'/>
           </IconContainer>
         </InputContainer>
 
@@ -43,7 +46,7 @@ export function Header() {
             </Text>
           </Button>
           <Button variant='secondary'>
-            <Text color='#FFFFFF' weight='600'>
+            <Text color={COLORS.TEXT_1} weight='600'>
               Entrar
             </Text>
           </Button>

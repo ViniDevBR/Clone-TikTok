@@ -5,12 +5,12 @@ export const NavContainer = styled.nav`
   z-index: 2;
   position: fixed;
   top: 70px;
-  border-right: 1px solid #FFFFFF1F;
+  border-right: 1px solid ${({ theme}) => theme.COLORS.BORDER_1};
   width: 70px;
   height: calc(100vh - 70px);
   padding: 12px 8px;
   overflow-y: scroll;
-  background-color: #121212;
+  background-color: ${({ theme}) => theme.COLORS.BACKGROUND};
 
   &::-webkit-scrollbar-thumb {
     display: none;
@@ -29,7 +29,7 @@ export const NavContainer = styled.nav`
 `
 
 export const IconContainer = styled.div`
-  border-bottom: 1px solid #FFFFFF1F;
+  border-bottom: 1px solid ${({ theme}) => theme.COLORS.BORDER_1};
   padding-bottom: 8px;
 
   .listOfItems {
@@ -49,7 +49,7 @@ export const IconContainer = styled.div`
     width: 100%;
 
     &:hover {
-      background-color: #2E2E2E;
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER6};
     }
     .screen {
       display: none;
@@ -62,7 +62,7 @@ export const IconContainer = styled.div`
         display: block;
         font-size: 1.6rem;
         font-weight: 600;
-        color: #FFFFFFE6;
+        color: ${({ theme}) => theme.COLORS.TEXT_3};
       }
     }
   }
@@ -92,7 +92,7 @@ export const TopUsersContainer = styled.div`
     width: 100%;
 
     &:hover {
-      background-color: #2E2E2E;
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER6};
     }
   }
   .userImg {
@@ -105,7 +105,7 @@ export const TopUsersContainer = styled.div`
     .userSuggestion {
       width: 100%;
       display: block;
-      color: #FFFFFFBF;
+      color: ${({ theme}) => theme.COLORS.TEXT_4};
       margin-block: 8px;
       padding-left: 8px;
       font-weight: 600;
@@ -115,13 +115,13 @@ export const TopUsersContainer = styled.div`
       flex-direction: column;
     }
     .nameUser {
-      color: #FFFFFFE6;
+      color: ${({ theme}) => theme.COLORS.TEXT_3};
       font-weight: 600;
       font-size: 1.6rem;
       margin-right: 5px;
     }
     .descUser {
-      color: #FFFFFFBF;
+      color: ${({ theme}) => theme.COLORS.TEXT_4};
     }
   }
 `
@@ -135,7 +135,7 @@ export const Login = styled.div`
 
     .alert {
       font-size: 1.6rem;
-      color: #FFFFFF80;
+      color: ${({ theme}) => theme.COLORS.TEXT_5};
       margin-bottom: 20px;
     }
   }
@@ -148,12 +148,12 @@ export const ExplorerContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 8px;
-    border-top: 1px solid #FFFFFF1F;
+    border-top: 1px solid ${({ theme}) => theme.COLORS.BORDER_1};
 
     .explorer {
       width: 100%;
       display: block;
-      color: #FFFFFFBF;
+      color: ${({ theme}) => theme.COLORS.TEXT_4};
       margin-block: 8px;
       font-weight: 600;
     }
@@ -168,16 +168,16 @@ export const ExplorerContainer = styled.div`
       gap: 5px;
       padding: 3px 10px;
       margin: 0 8px 12px 0;
-      background-color: #FFFFFF14;
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND6};
       border-radius: 500px;
       cursor: pointer;
 
       &:hover {
-        background-color: #FFFFFF05;
+        background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER7};
       }
     }
     .explorerName {
-      color: #FFFFFFBF;
+      color: ${({ theme}) => theme.COLORS.TEXT_4};
     }
   }
 `
@@ -189,7 +189,7 @@ export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 8px;
-    border-top: 1px solid #FFFFFF1F;
+    border-top: 1px solid ${({ theme}) => theme.COLORS.BORDER_1};
     gap: 10px;
     align-items: flex-start;
 
@@ -198,7 +198,7 @@ export const AboutContainer = styled.div`
       flex-wrap: wrap;
 
       .aboutLink {
-        color: #FFFFFF80;
+        color: ${({ theme}) => theme.COLORS.TEXT_5};
         margin: 5px 6px 0 0;
         font-weight: 600;
 

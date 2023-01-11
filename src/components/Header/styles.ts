@@ -8,8 +8,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #FFFFFF1F;
-  background-color: #121212;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BORDER_1};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
 
   .content {
     display: flex;
@@ -51,7 +51,7 @@ export const InputStyle = styled.div`
   @media (min-width: 800px) {
     display: flex;
     align-items: center;
-    background-color: #FFFFFF1F;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND3};
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     padding: 12px 0 12px 16px;
@@ -59,15 +59,15 @@ export const InputStyle = styled.div`
 
     input {
       border: none;
-      caret-color: #FF3B5C;
-      color: #FFF;
+      caret-color: ${({ theme }) => theme.COLORS.TEXT_2};
+      color:${({ theme }) => theme.COLORS.TEXT_1};
       outline: none;
       background-color: transparent;
       width: 270px;
     }
 
     .separator {
-      background-color: #FFFFFF1F;
+      background-color: ${({ theme }) => theme.COLORS.BORDER_1};
       height: 100%;
       width: 1px;
     }
@@ -82,14 +82,14 @@ export const IconContainer = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: none;
-    background-color: #FFFFFF1F;
-    padding: 12px;
+    background-color: ${({ theme }) => theme.COLORS.BORDER_1};
+    padding: 12px 16px 12px 12px;
     height: 45px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
 
     &:hover {
-      background-color: #FFFFFF4f;
+      background-color:  ${({ theme }) => theme.COLORS.BACKGROUND_HOVER5};
     }
   }
 `
@@ -110,7 +110,7 @@ export const MenuContainer = styled.div`
   .ballA {
     width: 5px;
     height: 5px;
-    background-color: #FFFFFFE6;
+    background-color:  ${({ theme }) => theme.COLORS.TEXT_3};
     border-radius: 50%;
     margin: 2px 0;
   }

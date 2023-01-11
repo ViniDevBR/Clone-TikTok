@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 280px;
   padding: 20px;
   z-index: 4;
-  background-color: #252525;
+  background-color: ${({ theme}) => theme.COLORS.BACKGROUND2};
   border-radius: 10px;
 
   .header {

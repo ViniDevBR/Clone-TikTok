@@ -7,7 +7,7 @@ interface TextProps {
 }
 
 export const Text = styled.p<TextProps>`
-  color: ${({ color }) => color || '#FFFFFFE6'};
+  color: ${({ color, theme }) => color || theme.COLORS.TEXT_3};
   font-size: ${({ size }) => size ? `${size}rem` : '1.6rem'};
   font-weight: ${({ weight }) => weight || '500'};
 `

@@ -17,6 +17,7 @@ import {
   ExplorerContainer,
   AboutContainer
 } from './styles'
+import { useTheme } from 'styled-components'
 //API MOCK
 import { topUsers } from '../../Mock/TopUsers'
 import { explorer } from '../../Mock/Explorer'
@@ -33,20 +34,22 @@ export function Navigation() {
   const [userList] = useState<IUsers[]>(topUsers)
   const [explorerList] = useState<IExplorer[]>(explorer)
 
+  const { COLORS } = useTheme()
+
   return(
     <NavContainer>
       <IconContainer>
         <ul className='listOfItems'>
           <li className='navItems'>
-            <House size={40} color="#FF3B5C" weight="duotone" />
+            <House size={40} color={COLORS.TEXT_2} weight="duotone" />
             <p className='screen'>Para Você</p>
           </li>
           <li className='navItems'>
-            <Users size={40} color="#FFFFFFE6" weight="light" />
+            <Users size={40} color={COLORS.TEXT_3} weight="light" />
             <p className='screen'>Seguindo</p>
           </li>
           <li className='navItems'>
-            <VideoCamera size={40} color='#FFFFFFE6' weight='light' />
+            <VideoCamera size={40} color={COLORS.TEXT_3} weight='light' />
             <p className='screen'>LIVE</p>
           </li>
         </ul>
@@ -56,7 +59,7 @@ export function Navigation() {
             Faça login para seguir criadores, curtir vídeos e ver comentários.
           </p>
           <Button width='100%' height='50px' variant='terciary'>
-            <Text color='#FF3B5C' size={1.8} weight='600'>
+            <Text color={COLORS.TEXT_2} size={1.8} weight='600'>
               Entrar
             </Text>
           </Button>
@@ -82,8 +85,8 @@ export function Navigation() {
         <ul className='explorerList'>
           {explorerList.map(explorer => (
             <li className='explorerItem' key={explorer.id}>
-              {explorer.type === 'hashtag' && <Hash size={20} color="#FFF" weight="regular" />}
-              {explorer.type === 'music' && <MusicNotesSimple size={20} color="#FFF" weight="regular" />}
+              {explorer.type === 'hashtag' && <Hash size={20} color={COLORS.TEXT_1} weight="regular" />}
+              {explorer.type === 'music' && <MusicNotesSimple size={20} color={COLORS.TEXT_1} weight="regular" />}
 
               <span className='explorerName'>{explorer.name}</span>
             </li>

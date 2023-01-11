@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContentContainer = styled.div`
   z-index: 4;
-  background-color: #252525;
+  background-color: ${({ theme}) => theme.COLORS.BACKGROUND2};
   border-radius: 10px;
   padding: 10px 0;
 
@@ -22,7 +22,7 @@ export const ContentContainer = styled.div`
       }
     }
     .listItem {
-      color: #FFFFFFE6;
+      color: ${({ theme}) => theme.COLORS.TEXT_3};
       font-size: 1.6rem;
       margin-left: 8px;
     }

@@ -48,12 +48,12 @@ export const GlobalStyles = createGlobalStyle`
     width: 5px;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: #FFFFFF14;
+    background-color: ${({ theme }) => theme.COLORS.SCROLLBAR};
     border-radius: 20px;
   }
 
   body {
-    background-color: #121212;
-    color: #FFFFFF;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+    color: ${({ theme }) => theme.COLORS.TEXT_1};
   }
 `
