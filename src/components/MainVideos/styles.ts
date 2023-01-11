@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const MainVideoContainer = styled.main`
-
   padding: 20px 10px;
   width: calc(100% - 70px);
   border-bottom: 1px solid #FFFFFF1F;
 
   @media (min-width: 1024px) {
-
-    padding: 20px 26px;
+    margin: 20px 26px;
+    padding: 0;
+    width: calc(70% - 70px);
+    max-width: 1140px;
   }
 `
 
@@ -17,19 +18,31 @@ export const VideoHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media (min-width: 1024px) {
+    align-items: flex-start;
+  }
 `
 
 export const UserInfo = styled.div`
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    .userName {
+      text-decoration: underline;
+    }
+  }
 
   img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    cursor: pointer;
   }
   .detailsUser {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -37,6 +50,7 @@ export const UserInfo = styled.div`
     width: 70%;
   }
   .userName{
+    cursor: pointer;
     color: #FFFFFFE6;
     font-size: 1.8rem;
     margin-right: 5px;
@@ -51,6 +65,15 @@ export const UserInfo = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+
+  @media (min-width: 1024px) {
+    align-items: flex-start;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
   }
 `
 
@@ -72,12 +95,26 @@ export const VideoInfos = styled.div`
     white-space: nowrap;
   }
   .descMusic {
+    cursor: pointer;
     color: #FFFFFFE6;
     margin-left: 5px;
     font-weight: 600;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 460px) {
+    margin: 5px 0 0 50px;
+    width: calc(100% - 130px);
+  }
+  @media (min-width: 1024px) {
+    margin: 0 0 0 70px;
+    width: calc(100% - 150px);
   }
 `
 
@@ -93,8 +130,19 @@ export const VideoPlay = styled.div`
     border-radius: 12px;
   }
 
-  .videoInfosPlus {
+  .videoInfosPlus {}
 
+  @media (min-width: 460px) {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+
+    .videoInfosPlus {
+      margin-left: 20px;
+    }
+  }
+  @media (min-width: 1024px) {
+    margin-left: 70px;
   }
 `
 
@@ -109,8 +157,8 @@ export const VideoPlayLikes = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: #FFFFFF1F;
     margin: 8px 0 6px;
   }

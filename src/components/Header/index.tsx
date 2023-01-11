@@ -51,7 +51,7 @@ export function Header() {
 
             <HoverCard.Portal>
 
-              <HoverCard.Content sideOffset={5}>
+              <HoverCard.Content sideOffset={5} asChild>
                 <ContentContainer>
                   <ul>
                     <li className='listContent'>

@@ -2,7 +2,14 @@ import { ChatCircleDots, Heart, MusicNotesSimple, ShareNetwork } from 'phosphor-
 import { IVideo } from '../../@types/Video'
 import { Button } from '../Button'
 import { Text } from '../Text'
-import { MainVideoContainer, VideoHeader, UserInfo, VideoInfos, VideoPlay, VideoPlayLikes } from './styles'
+import {
+  MainVideoContainer,
+  VideoHeader,
+  UserInfo,
+  VideoInfos,
+  VideoPlay,
+  VideoPlayLikes
+} from './styles'
 
 
 interface IProps {
@@ -22,7 +29,7 @@ export function MainVideo({ video }: IProps) {
           </div>
         </UserInfo>
 
-        <Button width='90px' height='30px' variant='terciary'>
+        <Button width='100px' height='30px' variant='terciary'>
           <Text color='#FF3B5C' weight='600'>
             Seguir
           </Text>
@@ -47,21 +54,21 @@ export function MainVideo({ video }: IProps) {
         <div className='videoInfosPlus'>
           <VideoPlayLikes>
             <div className='iconBg'>
-              <Heart size={20} color='#ffffff' weight='fill' />
+              <Heart size={25} color='#ffffff' weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.likes}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ChatCircleDots size={20} color='#ffffff' weight='fill' />
+              <ChatCircleDots size={25} color='#ffffff' weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.comments}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ShareNetwork size={20} color='#ffffff' weight='fill' />
+              <ShareNetwork size={25} color='#ffffff' weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.shared}</span>
           </VideoPlayLikes>

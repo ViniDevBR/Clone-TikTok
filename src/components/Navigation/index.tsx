@@ -57,7 +57,7 @@ export function Navigation() {
           </p>
           <Button width='100%' height='50px' variant='terciary'>
             <Text color='#FF3B5C' size={1.8} weight='600'>
-              Login
+              Entrar
             </Text>
           </Button>
         </Login>

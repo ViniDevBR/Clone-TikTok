@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const NavContainer = styled.nav`
+  align-self: flex-start;
+  z-index: 2;
   position: fixed;
   top: 70px;
   border-right: 1px solid #FFFFFF1F;
@@ -10,9 +12,19 @@ export const NavContainer = styled.nav`
   overflow-y: scroll;
   background-color: #121212;
 
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      display: block;
+    }
+  }
   @media (min-width: 1024px) {
     width: 30%;
     max-width: 340px;
+    margin-left: 5%;
+    border: none;
   }
 `
 

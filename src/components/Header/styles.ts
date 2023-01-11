@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
+  z-index: 2;
   position: fixed;
   width: 100%;
   height: 70px;
@@ -27,7 +28,7 @@ export const HeaderContainer = styled.header`
     .content {
       width: 90%;
       max-width: 1300px;
-      padding: 5px 16px;
+      padding: 1px 16px;
     }
     img {
       margin-left: 0;
@@ -116,11 +117,14 @@ export const MenuContainer = styled.div`
 `
 
 export const ContentContainer = styled.div`
+  z-index: 4;
   background-color: #252525;
   border-radius: 10px;
   padding: 10px 0;
 
   ul {
+    z-index: 4;
+
     .listContent{
       display: flex;
       align-items: center;
