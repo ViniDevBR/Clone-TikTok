@@ -161,9 +161,20 @@ export const VideoPlayLikes = styled.div`
     height: 35px;
     background-color: ${({ theme}) => theme.COLORS.BORDER_1};
     margin: 8px 0 6px;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER};
+    }
   }
   .videoInfosNumber {
     color: ${({ theme}) => theme.COLORS.TEXT_4};
     font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .iconBg {
+      width: 50px;
+      height: 50px;
+    }
   }
 `
