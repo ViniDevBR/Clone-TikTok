@@ -210,7 +210,6 @@ export const AboutContainer = styled.div`
           text-decoration: none
         }
       }
-
     }
   }
 `

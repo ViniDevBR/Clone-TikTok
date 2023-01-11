@@ -1,14 +1,22 @@
 //COMPONENTS
 import { Button } from '../Button'
 import { Text } from '../Text'
+import { MenuHoverCard } from '../MenuHoverCard'
 //STYLED-COMPONENTS
-import { HeaderContainer, InputStyle, IconContainer, Buttons, MenuContainer, InputContainer, ContentContainer } from './styles'
+import {
+  HeaderContainer,
+  InputStyle,
+  IconContainer,
+  Buttons,
+  MenuContainer,
+  InputContainer,
+} from './styles'
 //IMG && ICONS
 import logoImg from '../../assets/Images/TikTok-Logo.png'
-import { Keyboard, MagnifyingGlass, Moon, Question, Translate } from 'phosphor-react'
+import { MagnifyingGlass } from 'phosphor-react'
 //RADIX IU
 import * as HoverCard from '@radix-ui/react-hover-card'
-import './styles.css'
+
 
 export function Header() {
   return (
@@ -49,32 +57,7 @@ export function Header() {
               </MenuContainer>
             </HoverCard.Trigger>
 
-            <HoverCard.Portal>
-
-              <HoverCard.Content sideOffset={5} asChild>
-                <ContentContainer>
-                  <ul>
-                    <li className='listContent'>
-                      <Translate size={20} color='#FFFFFFE6' weight='bold' />
-                      <span className='listItem'>Português</span>
-                    </li>
-                    <li className='listContent'>
-                      <Question size={20} color='#FFFFFFE6' weight='bold' />
-                      <span className='listItem'>Ajuda</span>
-                    </li>
-                    <li className='listContent'>
-                      <Keyboard size={20} color='#FFFFFFE6' weight='bold' />
-                      <span className='listItem'>Atalhos do teclado</span>
-                    </li>
-                    <li className='listContent'>
-                      <Moon size={20} color="#FFFFFFE6" />
-                      <span className='listItem'>Modo escuro</span>
-                    </li>
-                  </ul>
-                  <HoverCard.Arrow className='HoverCardArrow' />
-                </ContentContainer>
-              </HoverCard.Content>
-            </HoverCard.Portal>
+            <MenuHoverCard />
           </HoverCard.Root>
         </Buttons>
       </div>

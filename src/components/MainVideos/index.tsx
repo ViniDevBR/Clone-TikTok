@@ -1,7 +1,5 @@
+//ICONS && STYLED-COMPONENTS
 import { ChatCircleDots, Heart, MusicNotesSimple, ShareNetwork } from 'phosphor-react'
-import { IVideo } from '../../@types/Video'
-import { Button } from '../Button'
-import { Text } from '../Text'
 import {
   MainVideoContainer,
   VideoHeader,
@@ -10,6 +8,14 @@ import {
   VideoPlay,
   VideoPlayLikes
 } from './styles'
+//TYPES
+import { IVideo } from '../../@types/Video'
+//COMPONENTS
+import { Button } from '../Button'
+import { Text } from '../Text'
+//RADIX UI
+import * as HoverCard from '@radix-ui/react-hover-card'
+import { UserHoverCard } from '../UserHoverCard'
 
 
 interface IProps {
@@ -22,7 +28,14 @@ export function MainVideo({ video }: IProps) {
     <MainVideoContainer>
       <VideoHeader>
         <UserInfo>
-          <img src={video.user.avatarURL} alt='foto do usuario' />
+          <HoverCard.Root>
+            <HoverCard.Trigger asChild>
+              <img src={video.user.avatarURL} alt='foto do usuario' />
+            </HoverCard.Trigger>
+
+            <UserHoverCard user={video.user} />
+          </HoverCard.Root>
+
           <div className='detailsUser'>
             <span className='userName'>{video.user.name}</span>
             <span className='userDesc'>{video.user.description}</span>
