@@ -9,17 +9,26 @@ import { Home } from './pages/Home'
 //STYLED-COMPONENTS
 import { GlobalStyles } from './styles/globalStyles'
 import { ThemeProvider } from 'styled-components'
-import theme from './theme'
+//CONTEXT
+import { ToggleSwitch } from './context/ToggleSwitch'
+import { ToggleSwitchProvider } from './context/ToggleSwitch'
 
 export function App() {
+
   return (
-    <ThemeProvider theme={theme['dark']}>
-      <Router>
-        <GlobalStyles />
-        <Routes>
-          <Route path='/' element={<Home />}/>
-        </Routes>
-      </Router>
-    </ThemeProvider>
+    <ToggleSwitchProvider>
+      <ToggleSwitch.Consumer>
+        {({ themeMode }) => (
+          <ThemeProvider theme={themeMode}>
+            <Router>
+              <GlobalStyles />
+              <Routes>
+                <Route path='/' element={<Home />}/>
+              </Routes>
+            </Router>
+          </ThemeProvider>
+        )}
+      </ToggleSwitch.Consumer>
+    </ToggleSwitchProvider>
   )
 }

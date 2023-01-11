@@ -4,10 +4,17 @@ import * as HoverCard from '@radix-ui/react-hover-card'
 import { Keyboard, Moon, Question, Translate } from 'phosphor-react'
 import { ContentContainer } from './styles'
 import { useTheme } from 'styled-components'
+//HOOKS
+import { useToggle } from '../../hooks/useToggle'
 
 export function MenuHoverCard() {
   const { COLORS } = useTheme()
+  const { toggleMode, setToggleMode } = useToggle()
 
+  function handleSwitch() {
+    setToggleMode(!toggleMode)
+  }
+  
   return(
     <HoverCard.Portal>
       <HoverCard.Content sideOffset={5} asChild>
@@ -25,7 +32,7 @@ export function MenuHoverCard() {
               <Keyboard size={20} color={COLORS.TEXT_3} weight='bold' />
               <span className='listItem'>Atalhos do teclado</span>
             </li>
-            <li className='listContent' onClick={() => []}>
+            <li className='listContent' onClick={handleSwitch}>
               <Moon size={20} color={COLORS.TEXT_3} />
               <span className='listItem'>Modo escuro</span>
             </li>
