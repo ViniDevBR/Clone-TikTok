@@ -10,7 +10,7 @@ export const ListContainer = styled.li`
   width: 100%;
 
   &:hover {
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER6};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER5};
   }
 
   .contentUser {

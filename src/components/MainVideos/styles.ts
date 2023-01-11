@@ -159,11 +159,11 @@ export const VideoPlayLikes = styled.div`
     justify-content: center;
     width: 35px;
     height: 35px;
-    background-color: ${({ theme}) => theme.COLORS.BORDER_1};
+    background-color: ${({ theme}) => theme.COLORS.BACKGROUND3};
     margin: 8px 0 6px;
 
     &:hover {
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER};
+      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER7};
     }
   }
   .videoInfosNumber {

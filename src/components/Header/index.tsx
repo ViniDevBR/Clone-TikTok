@@ -13,20 +13,25 @@ import {
 } from './styles'
 import { useTheme } from 'styled-components'
 //IMG && ICONS
-import logoImg from '../../assets/Images/TikTok-Logo.png'
+import logoImgDark from '../../assets/Images/TikTok-Logo.png'
+import logoImgLight from '../../assets/Images/tiktok-logo-2.png'
 import { MagnifyingGlass } from 'phosphor-react'
 //RADIX IU
 import * as HoverCard from '@radix-ui/react-hover-card'
+import { useToggle } from '../../hooks/useToggle'
 
 
 export function Header() {
   const { COLORS } = useTheme()
+  const { toggleMode } = useToggle()
+
+  const img = toggleMode ? logoImgDark : logoImgLight
 
   return (
     <HeaderContainer>
       <div className='content'>
         <a href="/">
-          <img src={logoImg} alt='Logo TikTok' />
+          <img src={img} alt='Logo TikTok' />
         </a>
 
         <InputContainer>

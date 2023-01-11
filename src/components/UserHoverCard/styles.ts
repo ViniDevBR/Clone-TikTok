@@ -6,6 +6,7 @@ export const Container = styled.div`
   z-index: 4;
   background-color: ${({ theme}) => theme.COLORS.BACKGROUND2};
   border-radius: 10px;
+  box-shadow: -2px 2px 10px ${({ theme}) => theme.COLORS.SHADOW};
 
   .header {
     display: flex;

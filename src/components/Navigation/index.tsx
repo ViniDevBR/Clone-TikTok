@@ -84,9 +84,14 @@ export function Navigation() {
 
         <ul className='explorerList'>
           {explorerList.map(explorer => (
+
             <li className='explorerItem' key={explorer.id}>
-              {explorer.type === 'hashtag' && <Hash size={20} color={COLORS.TEXT_1} weight="regular" />}
-              {explorer.type === 'music' && <MusicNotesSimple size={20} color={COLORS.TEXT_1} weight="regular" />}
+              {explorer.type === 'hashtag' && (
+                <Hash size={20} color={COLORS.TEXT_6} weight="regular" />
+              )}
+              {explorer.type === 'music' && (
+                <MusicNotesSimple size={20} color={COLORS.TEXT_6} weight="regular" />
+              )}
 
               <span className='explorerName'>{explorer.name}</span>
             </li>

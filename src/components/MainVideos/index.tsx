@@ -55,7 +55,7 @@ export function MainVideo({ video }: IProps) {
         {video.descriptionVideo && <span className='descVideo'>{video.descriptionVideo}</span>}
         {video.music && (
           <div className='musicNote'>
-            <MusicNotesSimple size={15} color={COLORS.TEXT_1} weight="regular" />
+            <MusicNotesSimple size={15} color={COLORS.TEXT_6} weight="bold" />
             <span className='descMusic'>{video.music}</span>
           </div>
         )}
@@ -69,21 +69,21 @@ export function MainVideo({ video }: IProps) {
         <div className='videoInfosPlus'>
           <VideoPlayLikes>
             <div className='iconBg'>
-              <Heart size={25} color={COLORS.TEXT_1} weight='fill' />
+              <Heart size={25} color={COLORS.TEXT_6} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.likes}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ChatCircleDots size={25} color={COLORS.TEXT_1} weight='fill' />
+              <ChatCircleDots size={25} color={COLORS.TEXT_6} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.comments}</span>
           </VideoPlayLikes>
 
           <VideoPlayLikes>
             <div className='iconBg'>
-              <ShareNetwork size={25} color={COLORS.TEXT_1} weight='fill' />
+              <ShareNetwork size={25} color={COLORS.TEXT_6} weight='fill' />
             </div>
             <span className='videoInfosNumber'>{video.shared}</span>
           </VideoPlayLikes>

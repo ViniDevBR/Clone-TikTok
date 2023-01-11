@@ -49,7 +49,7 @@ export const IconContainer = styled.div`
     width: 100%;
 
     &:hover {
-      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER6};
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER5};
     }
     .screen {
       display: none;
@@ -92,7 +92,7 @@ export const TopUsersContainer = styled.div`
     width: 100%;
 
     &:hover {
-      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER6};
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER5};
     }
   }
   .userImg {
@@ -168,12 +168,14 @@ export const ExplorerContainer = styled.div`
       gap: 5px;
       padding: 3px 10px;
       margin: 0 8px 12px 0;
-      background-color: ${({ theme}) => theme.COLORS.BACKGROUND6};
+      background-color: ${({ theme}) => theme.COLORS.BACKGROUND4};
       border-radius: 500px;
+      border: 1px solid ${({ theme}) => theme.COLORS.BORDER_3};
       cursor: pointer;
 
       &:hover {
-        background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER7};
+        background-color: ${({ theme}) => theme.COLORS.BACKGROUND_HOVER6};
+        border: 1px solid ${({ theme}) => theme.COLORS.BORDER_HOVER};
       }
     }
     .explorerName {

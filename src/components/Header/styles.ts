@@ -60,7 +60,7 @@ export const InputStyle = styled.div`
     input {
       border: none;
       caret-color: ${({ theme }) => theme.COLORS.TEXT_2};
-      color:${({ theme }) => theme.COLORS.TEXT_1};
+      color:${({ theme }) => theme.COLORS.TEXT_6};
       outline: none;
       background-color: transparent;
       width: 270px;
@@ -82,14 +82,14 @@ export const IconContainer = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: none;
-    background-color: ${({ theme }) => theme.COLORS.BORDER_1};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND3};
     padding: 12px 16px 12px 12px;
     height: 45px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
 
     &:hover {
-      background-color:  ${({ theme }) => theme.COLORS.BACKGROUND_HOVER5};
+      background-color:  ${({ theme }) => theme.COLORS.BACKGROUND_HOVER7};
     }
   }
 `
