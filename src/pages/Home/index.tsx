@@ -11,7 +11,7 @@ export function Home() {
   return (
     <Container>
       <Header />
-      {/* COMENTAR NAVIGATION PARA VER O MAIN CONTAINER */}
+     
       <Navigation />
       <MainContainer>
         {videos.map(video => (
