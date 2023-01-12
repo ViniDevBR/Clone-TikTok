@@ -2,6 +2,7 @@
 import { Header } from '../../components/Header'
 import { MainVideo } from '../../components/MainVideos'
 import { Navigation } from '../../components/Navigation'
+import { ScrollToTop } from '../../components/ScrollToTop'
 //STYLED-COMPONENTS
 import { MainContainer, Container } from './styles'
 //MOCKS
@@ -11,7 +12,7 @@ export function Home() {
   return (
     <Container>
       <Header />
-     
+
       <Navigation />
       <MainContainer>
         {videos.map(video => (
@@ -20,6 +21,7 @@ export function Home() {
             video={video}
           />
         ))}
+        <ScrollToTop />
       </MainContainer>
     </Container>
   )
