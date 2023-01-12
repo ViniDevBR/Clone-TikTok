@@ -22,8 +22,11 @@ export const dark = {
     BORDER_1: '#FFFFFF1F',
     BORDER_2: '#FF3B5C',
     BORDER_3: '#252525',
+    BORDER_4: '#252525',
 
     BORDER_HOVER: '#FFFFFF05',
+    BORDER_HOVER2: '#25252590',
+    BORDER_HOVER3: '#FF2C55',
 
     ICON: '#767676',
     ICON_2: '#20D5EC',

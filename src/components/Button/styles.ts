@@ -10,7 +10,7 @@ export const ButtonContainer = styled.button<IProps>`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND2};
   height: ${({ height }) => height || '35px'};
   width: ${({ width }) => width || '120px'};
-  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_1};
+  border: 1px solid ${({ theme }) => theme.COLORS.BORDER_4};
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -19,6 +19,7 @@ export const ButtonContainer = styled.button<IProps>`
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER};
+    border: 1px solid ${({ theme }) => theme.COLORS.BORDER_HOVER2};
   }
 
   ${({variant}) => variant === 'secondary' && css`
@@ -27,6 +28,7 @@ export const ButtonContainer = styled.button<IProps>`
 
     &:hover {
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER2};
+      border: 1px solid ${({ theme }) => theme.COLORS.BORDER_HOVER3};
     }
   `}
 
@@ -37,6 +39,7 @@ export const ButtonContainer = styled.button<IProps>`
 
     &:hover {
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_HOVER3};
+      border: 1px solid ${({ theme }) => theme.COLORS.BORDER_2};
     }
   `}
 `

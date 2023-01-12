@@ -108,10 +108,17 @@ export const MenuContainer = styled.div`
   padding: 0 10px;
 
   .ballA {
+    display: none;
     width: 5px;
     height: 5px;
     background-color:  ${({ theme }) => theme.COLORS.TEXT_3};
     border-radius: 50%;
     margin: 2px 0;
+  }
+
+  @media (min-width: 1024px) {
+    .ballA {
+      display: block;
+    }
   }
 `

@@ -21,8 +21,11 @@ export const light = {
     BORDER_1: '#1618231F',
     BORDER_2: '#FF3B5C',
     BORDER_3: '#16182333',
+    BORDER_4: '#1618231F',
 
     BORDER_HOVER: '#16182333',
+    BORDER_HOVER2: '#1618231F',
+    BORDER_HOVER3: '#FF3B5C',
 
     ICON: '#767676',
     ICON_2: '#20D5EC',
